@@ -1,11 +1,14 @@
-@import "utils";
-@import "base";
+@import "utils/variables";
+@import "utils/base";
 @import "components/header";
-@import "components/hero";
-@import "components/advantages";
-@import "components/capabilities";
-@import "components/our-team";
-@import "components/our-clients";
-@import "components/modal";
-
+@import "components/studio/hero";
+@import "components/studio/advantages";
+@import "components/studio/capabilities";
+@import "components/studio/our-team";
+@import "components/studio/our-clients";
 @import "components/footer";
+@import "components/portfolio/main-portfolio";
+@import "components/portfolio/filters";
+@import "components/portfolio/our-products";
+
+@import "components/studio/modal";

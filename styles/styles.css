@@ -246,11 +246,7 @@ header {
 .our-products-list img {
   display: block;
 }
-.product-container {
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 20px;
-}
+
 .our-products-item {
   border: 1px solid #eeeeee;
   width: calc((100% - 60px) / 3);
@@ -266,11 +262,22 @@ header {
     0px 1px 1px rgba(0, 0, 0, 0.12);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) box-shadow;
 }
-
+.our-products-item:hover .product-description,
+.our-products-item:focus .product-description {
+  transform: translateY(0);
+}
+.our-products-image {
+  position: relative;
+  overflow: hidden;
+}
 .our-products-item:nth-child(n + 4) {
   margin-top: 30px;
 }
-
+.product-container {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+}
 .product-name {
   margin-top: 20px;
   font-weight: 700;
@@ -304,14 +311,7 @@ header {
   transition-property: transform;
   transform: translateY(101%);
 }
-.our-products-item:hover .product-description,
-.our-products-item:focus .product-description {
-  transform: translateY(0);
-}
-.our-products-image {
-  position: relative;
-  overflow: hidden;
-}
+
 .products-type {
   font-size: 16px;
   line-height: 1.87;
@@ -741,6 +741,27 @@ MODAL
   fill: var(--primary-text-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) fill;
 }
+.modal-input {
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+.modal-input:focus {
+  border-color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) border-color;
+}
+.modal-input:not(:placeholder-shown) ~ .modal-label,
+.modal-input:focus ~ .modal-label {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, transform;
+  transform: translate(-25px, -30px);
+  color: var(--accent-color);
+}
+
 .modal-input:focus-within ~ .modal-icon {
   fill: var(--accent-color);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) fill;
@@ -756,26 +777,7 @@ MODAL
   transform: translate(0px, 0px);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) transform;
 }
-.modal-input {
-  width: 448px;
-  height: 40px;
-  padding-left: 42px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-}
-.modal-input:not(:placeholder-shown) ~ .modal-label,
-.modal-input:focus ~ .modal-label {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color, transform;
-  transform: translate(-25px, -30px);
-  color: var(--accent-color);
-}
-.modal-input:focus {
-  border-color: var(--accent-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1) border-color;
-}
+
 .modal-text-area {
   display: block;
   width: 448px;
